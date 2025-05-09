@@ -1,0 +1,45 @@
+<section id="contact">
+    <h2>Contactez-nous</h2>
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
+      
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input
+          type="text"
+          id="nom"
+          name="nom"
+          ngModel
+          required
+          placeholder="Votre nom"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          ngModel
+          required
+          placeholder="votre@email.com"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          ngModel
+          required
+          placeholder="Votre message ici..."
+        ></textarea>
+      </div>
+  
+      <button type="submit" [disabled]="!contactForm.valid">Envoyer</button>
+    </form>
+  </section>
+  
