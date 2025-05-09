@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "nom": "Astérix",
+      "prix": 29.99,
+      "image": "#",
+      "description": "Astérix, le héros intrépide du village, toujours prêt à défendre les siens grâce à la potion magique."
+    },
+    {
+      "id": 2,
+      "nom": "Obélix",
+      "prix": 34.99,
+      "image": "#",
+      "description": "Obélix, le fidèle compagnon d'Astérix, transporteur de menhirs et amateur de sangliers."
+    },
+    {
+      "id": 3,
+      "nom": "Idéfix",
+      "prix": 14.99,
+      "image": "#",
+      "description": "Idéfix, le petit chien d’Obélix, protecteur des arbres et compagnon fidèle."
+    },
+    {
+      "id": 4,
+      "nom": "Panoramix",
+      "prix": 32.99,
+      "image": "#",
+      "description": "Panoramix, le druide du village, maître de la potion magique et de la sagesse gauloise."
+    },
+    {
+      "id": 5,
+      "nom": "Abraracourcix",
+      "prix": 27.99,
+      "image": "#",
+      "description": "Abraracourcix, le chef valeureux du village, que le ciel ne doit pas lui tomber sur la tête."
+    },
+    {
+      "id": 6,
+      "nom": "Assurancetourix",
+      "prix": 24.99,
+      "image": "#",
+      "description": "Assurancetourix, le barde du village... dont le chant est redouté autant que les légions romaines."
+    }
+  ]
+  
