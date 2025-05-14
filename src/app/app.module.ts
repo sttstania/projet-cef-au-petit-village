@@ -11,6 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SortByPricePipe } from './pipes/sort-by-price.pipe';
 import { FilterByNamePipe } from './pipes/filter-by-name.pipe';
+import { ProductComponent } from './pages/product/product.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FilterByNamePipe } from './pipes/filter-by-name.pipe';
     HomeComponent,
     ContactComponent,
     SortByPricePipe,
-    FilterByNamePipe
+    FilterByNamePipe,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

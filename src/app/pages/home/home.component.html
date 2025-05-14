@@ -1,10 +1,20 @@
 <section class="presentation">
     <h1>Bienvenue chez "Au Petit Village"</h1>
     <p> Découvrez nos <em>figurines artisanales</em> inspirées de l’univers d’<em>Astérix & Obélix</em>, faites main avec passion.</p>
+    <a routerLink="/about">
+      <button class="btn">En savoir plus</button>
+    </a>
   </section>
   
   <section class="recherche-tri">
-    <input type="text" placeholder="Rechercher une figurine">
+    <h2>Nos figurines</h2>
+
+
+    <!-- a refaire -->
+    <div>
+      <input type="text" placeholder="Rechercher une figurine">
+      <button class="btn" >Rechercher</button>
+    </div>
   
     <select>
       <option value="asc">Prix croissant</option>
@@ -14,9 +24,9 @@
   
   <section class="catalogue">
     <div class="produit">
-      <!-- <img [src]="produit.image" alt="produit.nom" /> -->
-      <!-- <h3>{{ produit.nom }}</h3> -->
-      <!-- <p>{{ produit.description }}</p> -->
-      <!-- <p><strong>{{ produit.prix | currency: 'EUR' }}</strong></p> -->
+      <!-- <img [src]="product.image" alt="produit.nom" /> -->
+      <!-- <h3>{{ product.name }}</h3> -->
+      <!-- <p>{{ product.description }}</p> -->
+      <!-- <p><strong>{{ product.price | currency: 'EUR' }}</strong></p> -->
     </div>
   </section>
