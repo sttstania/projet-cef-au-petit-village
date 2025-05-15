@@ -1,1 +1,13 @@
-<p>product works!</p>
+<section>
+    <h1>Découvrez nos figurines exclusives Astérix & Obélix</h1>
+    <div *ngFor="let fig of figurines" class="figurines-card">
+        <h3>{{ fig.name }}</h3>
+        <img [src]="fig.imageUrl" [alt]="fig.name">
+        <div>
+            <h2>Description</h2>
+            <p>{{ fig.description }}</p>
+        </div>
+        <p><strong>{{ fig.price | currency: 'EUR' : 'simbol' : '1.2-2' }}</strong></p>
+        <p>{{ fig.inStock }}</p>
+    </div>
+</section>

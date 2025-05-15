@@ -9,8 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { SortByPricePipe } from './pipes/sort-by-price.pipe';
-import { FilterByNamePipe } from './pipes/filter-by-name.pipe';
+import { HttpClientModule } from '@angular/common/http';
 import { ProductComponent } from './pages/product/product.component';
 
 @NgModule({
@@ -21,14 +20,13 @@ import { ProductComponent } from './pages/product/product.component';
     FooterComponent,
     HomeComponent,
     ContactComponent,
-    SortByPricePipe,
-    FilterByNamePipe,
-    ProductComponent
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [
     provideClientHydration(withEventReplay())

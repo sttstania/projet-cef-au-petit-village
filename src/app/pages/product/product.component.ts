@@ -1,11 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FigurineModel } from '../../models/figurine.model';
+import { FigurineService } from '../../services/figurines.service';
+
 
 @Component({
   selector: 'app-product',
   standalone: false,
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  styleUrl: './product.component.css'
 })
-export class ProductComponent {
+export class ProductComponent implements OnInit {
+  figurines: FigurineModel[] = [];
 
+  constructor(private figurineService: FigurineService) {}
+
+  ngOnInit(): void {
+    this.figurineService.getFigurines().subscribe(data => {
+      this.figurines = data;
+    });
+  }
 }
