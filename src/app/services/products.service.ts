@@ -1,18 +1,19 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Product } from '../product.model';
+import { HttpClient } from '@angular/common/http';
+import { Observable, map } from 'rxjs';
+import { FigurineModel } from '../models/figurine.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProductsService {
+export class ProductService {
+  private url = 'assets/data/figurines.json';
 
-  private apiUrl = 'assets/data/products.json';
-  
   constructor(private http: HttpClient) { }
 
-  getProducts(): Observable<any> {
-    return this.http.get<Product[]>(this.apiUrl);
+  getFigurines(): Observable<FigurineModel[]> {
+    return this.http.get<FigurineModel[]>(this.url).pipe(
+      map(data => data.map(item => new FigurineModel(item)))
+    );
   }
 }
