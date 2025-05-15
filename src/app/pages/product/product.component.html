@@ -1,0 +1,9 @@
+<section>
+    <div *ngFor="let fig of figurines" class="figurines-card">
+        <h3>{{ fig.name }}</h3>
+        <img [src]="fig.imageUrl" [alt]="fig.name">
+        <p>{{ fig.description }}</p>
+        <p><strong>{{ fig.price }}</strong></p>
+        <p>{{ fig.inStock }}</p>
+    </div>
+</section>
