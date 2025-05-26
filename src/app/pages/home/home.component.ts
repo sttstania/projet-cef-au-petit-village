@@ -30,18 +30,30 @@ export class HomeComponent {
     this.visibleFigurines = this.figurines.slice(start, end);
   }
 
-  nextPage() {
-    if ((this.currentPage + 1) * this.itemsPerPage < this.figurines.length) {
-      this.currentPage++;
-      this.updateVisibleFigurines();
-    }
+nextPage() {
+  const maxPage = Math.floor((this.figurines.length - 1) / this.itemsPerPage);
+
+  if (this.currentPage >= maxPage) {
+    // Revenir au début
+    this.currentPage = 0;
+  } else {
+    this.currentPage++;
   }
+
+  this.updateVisibleFigurines();
+}
+
+
   prevPage() {
-    if (this.currentPage > 0 ) {
-      this.currentPage--;
-      this.updateVisibleFigurines();
-    }
+     if (this.currentPage === 0) {
+    // Aller à la dernière page
+    this.currentPage = Math.floor((this.figurines.length - 1) / this.itemsPerPage);
+  } else {
+    this.currentPage--;
   }
+
+  this.updateVisibleFigurines();
+}
 
   goToProduct(id: number) {
     this.router.navigate(['/product', id]);

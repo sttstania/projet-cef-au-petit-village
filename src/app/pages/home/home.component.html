@@ -33,7 +33,7 @@
     <button class="arrow" (click)="prevPage()"><</button>
     <div class="carousel">
           <div 
-            *ngFor="let fig of figurines" 
+            *ngFor="let fig of visibleFigurines" 
             class="figurines-card"
             (click)="goToProduct(fig.id)">
             
