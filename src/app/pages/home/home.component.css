@@ -25,3 +25,48 @@
 .catalogue {
   margin-top: 2rem;
 }
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.carousel-items {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.figurines-card {
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: var(--radius);
+  width: 30%;
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.figurines-card:hover {
+  transform: scale(1.05);
+}
+
+.figurines-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--clr-accent);
+}

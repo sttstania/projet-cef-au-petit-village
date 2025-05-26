@@ -30,13 +30,19 @@
 <section class="catalogue">
   <div class="card">
     <h2 >Entrez dans l’univers d’Astérix et Obélix !</h2>
-   <!-- <div>
-          <div *ngFor="let fig of figurines" class="figurines-card">
+    <button class="arrow" (click)="prevFigurine()"><</button>
+    <div class="carousel">
+          <div 
+            *ngFor="let fig of figurines" 
+            class="figurines-card"
+            (click)="goToProduct(fig.id)">
+            
             <h3>{{ fig.name }}</h3>
             <img [src]="fig.imageUrl" [alt]="fig.name">
-            <p><strong>{{ fig.price |  number: '1.2-2' }} €}}</strong></p>
-            <p [[ngClass]="fig.inStock ? 'en-stock : 'rupture"]>{{ fig.inStock ? 'En stock' : 'Rupture de stock' }}</p>
+            <p class="price"><strong>{{ fig.price |  number: '1.2-2' }} €</strong></p>
           </div>
-    </div> -->
+    </div>
+
+    <button class="arrow" (click)="nextFigurine()">></button>
   </div>
 </section>
