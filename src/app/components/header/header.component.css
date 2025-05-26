@@ -1,0 +1,95 @@
+header {
+  background: radial-gradient(circle at center, white 0%, var(--clr-dark) 80%);
+  padding: 1.5rem 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-bottom: 4px solid var(--clr-primary);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.logo {
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 1rem;
+  border: 3px solid var(--clr-primary);
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 40px;
+}
+
+.menu-toggle {
+  background-color: var(--clr-primary);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  border-radius: var(--radius);
+  cursor: pointer;
+  margin-bottom: 1rem;
+  color: var(--clr-dark);
+  font-family: var(--font-title);
+  font-size: 1rem;
+  box-shadow: 2px 2px 0 var(--clr-accent);
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+}
+
+nav.open {
+  display: flex;
+}
+
+nav a {
+  color: var(--clr-dark);
+  background-color: var(--clr-primary);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s;
+  font-family: var(--font-title);
+  box-shadow: 1px 1px 0 var(--clr-accent);
+}
+
+nav a:hover {
+  color: white;
+  background-color: var(--clr-accent);
+  text-decoration: none;
+}
+
+/* Desktop version */
+@media (min-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}

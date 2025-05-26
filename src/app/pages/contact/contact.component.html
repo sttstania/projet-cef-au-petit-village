@@ -1,5 +1,6 @@
 <section id="contact">
-    <h2>Contactez-nous</h2>
+  <div class="card">
+    <h1>Contactez-nous</h1>
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
       
@@ -41,5 +42,6 @@
   
       <button type="submit" [disabled]="!contactForm.valid">Envoyer</button>
     </form>
-  </section>
+  </div>
+</section>
   

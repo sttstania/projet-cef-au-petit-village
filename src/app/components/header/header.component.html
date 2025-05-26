@@ -5,9 +5,9 @@
         </a>
     </div>
 
-    <button class="menu-toggle">Menu</button>
+    <button class="menu-toggle" (click)="isMenuOpen = !isMenuOpen">Menu</button>
 
-    <nav class="isMenuOpen">
+    <nav [ngClass]="{ open: isMenuOpen }">
         <a routerLink="/">Accueil</a>
         <a routerLink="/about">À propos</a>
         <a routerLink="/product">Produits</a>

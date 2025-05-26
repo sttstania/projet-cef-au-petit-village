@@ -1,0 +1,49 @@
+.catalogue {
+  padding: 1rem;
+}
+
+.figurines-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+ 
+
+.figurines-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+   object-position: top;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+
+.figurine-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.en-stock {
+  color: #228B22;
+  font-weight: bold;
+}
+
+.rupture {
+  color: #DA001E;
+  font-weight: bold;
+}
+
+@media (min-width: 600px) {
+  .figurines-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .figurines-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
