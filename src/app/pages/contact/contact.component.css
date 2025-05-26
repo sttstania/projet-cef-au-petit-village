@@ -1,0 +1,13 @@
+#contact {
+  max-width: 600px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+button[type="submit"] {
+  margin-top: 1rem;
+}

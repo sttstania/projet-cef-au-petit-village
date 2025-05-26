@@ -1,13 +1,17 @@
-<section>
-    <h1>Découvrez nos figurines exclusives Astérix & Obélix</h1>
+<section class="catalogue">
+  <h1>Découvrez nos figurines exclusives Astérix & Obélix</h1>
+  <div class="figurines-grid">
     <div *ngFor="let fig of figurines" class="figurines-card">
-        <h3>{{ fig.name }}</h3>
         <img [src]="fig.imageUrl" [alt]="fig.name">
-        <div>
-            <h2>Description</h2>
+        <div class="figurine-content">
+            <h3>{{ fig.name }}</h3>
+            <h4>Description</h4>
             <p>{{ fig.description }}</p>
+            <p><strong>{{ fig.price | currency: 'EUR' : '€ ' : '1.2-2' }}</strong></p>
+            <p [ngClass]="fig.inStock ? 'en-stock' : 'rupture'">
+                {{ fig.inStock ? 'En stock' : 'Rupture de stock' }}
+            </p>      
         </div>
-        <p><strong>{{ fig.price | currency: 'EUR' : 'simbol' : '1.2-2' }}</strong></p>
-        <p>{{ fig.inStock }}</p>
     </div>
+  </div>
 </section>

@@ -1,0 +1,26 @@
+header {
+  background-color: var(--clr-dark);
+  padding: 1rem;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  nav {
+    flex-direction: row;
+  }
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
