@@ -3,12 +3,43 @@ footer {
   color: white;
   text-align: center;
   padding: 2rem 1rem;
+  margin-top: 2rem;
+  border-top: 4px solid var(--clr-primary);
+  border-radius: var(--radius) var(--radius) 0 0;
+  font-family: var(--font-body);
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.5rem;
   list-style: none;
+  padding: 0;
   margin-bottom: 1rem;
+}
+
+.social-links li a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.social-links li a:hover {
+  transform: scale(1.2);
+}
+
+.social-links img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+}
+
+footer p {
+  font-size: 0.95rem;
+  font-family: var(--font-body);
 }

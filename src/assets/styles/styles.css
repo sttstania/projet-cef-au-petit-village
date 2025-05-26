@@ -1,5 +1,12 @@
-/* ====== RESET + ROOT VARS ====== */
-@import url('https://fonts.googleapis.com/css2?family=Bubbleboddy+Neue&family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+@font-face {
+  font-family: 'Bubbleboddy Neue';
+  src: url('../fonts/BubbleboddyNeue-Bold\ Trial.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 
 :root {
   --clr-bg: #F9D0A3;
@@ -7,14 +14,14 @@
   --clr-dark: #151217;
   --clr-accent: #DA001E;
 
-  --font-title: 'Bubbleboddy Neue', sans-serif;
-  --font-body: 'Comfortaa', cursive;
+--font-body: 'Comfortaa', system-ui, sans-serif;
+--font-title: 'Bubbleboddy Neue', system-ui, sans-serif;
 
   --spacing: 1rem;
   --radius: 0.5rem;
 }
 
-/* Reset simple */
+/* ====== RESET ====== */
 * {
   margin: 0;
   padding: 0;
@@ -35,30 +42,43 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--clr-accent);
+  text-shadow: 1px 1px var(--clr-dark);
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--clr-primary);
+  text-shadow: 1px 1px var(--clr-dark);
+}
+
+h3 {
+  font-size: 1.3rem;
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.05rem;
+  color: var(--clr-dark);
 }
 
-/* ====== GLOBAL UTILITIES ====== */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: var(--spacing);
+a {
+  color: var(--clr-accent);
+  text-decoration: none;
+  font-weight: bold;
 }
 
+a:hover {
+  text-decoration: underline;
+  color: var(--clr-primary);
+}
+
+/* ====== UTILITAIRES ====== */
 .btn {
   background-color: var(--clr-primary);
   color: var(--clr-dark);
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
+  margin: 1rem;
   border: none;
   border-radius: var(--radius);
   font-weight: bold;
@@ -71,22 +91,19 @@ p {
   color: white;
 }
 
+
 .card {
   background-color: white;
-  border-radius: var(--radius);
   padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin-bottom: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: var(--radius);
-}
-
-/* ====== FORMULAIRE (réutilisable) ====== */
+/* ====== FORM ====== */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -100,7 +117,14 @@ input, textarea, select {
   font-family: var(--font-body);
 }
 
-/* ====== RESPONSIVE (mobile-first) ====== */
+/* ====== CONTAINER ====== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing);
+}
+
+/* ====== RESPONSIVE ====== */
 @media (min-width: 768px) {
   .row {
     display: flex;

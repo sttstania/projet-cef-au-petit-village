@@ -7,17 +7,7 @@
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
-
-.figurines-card {
-  background-color: white;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
+ 
 
 .figurines-card img {
   width: 100%;
@@ -27,6 +17,7 @@
   border-top-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
+
 
 .figurine-content {
   padding: 1rem;

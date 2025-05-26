@@ -1,12 +1,16 @@
 <section class="presentation">
-    <h1>Bienvenue chez "Au Petit Village"</h1>
+  <div class="card">
+    <h1>Bienvenue "Au Petit Village"</h1>
+    
     <p> Découvrez nos <em>figurines artisanales</em> inspirées de l’univers d’<em>Astérix & Obélix</em>, faites main avec passion.</p>
     <a routerLink="/about">
       <button class="btn ">En savoir plus</button>
     </a>
-  </section>
+   </div>
+</section>
   
-  <section class="recherche-tri">
+<section class="recherche-tri">
+  <div class="card">
     <h2>Nos figurines</h2>
 
 
@@ -20,15 +24,19 @@
       <option value="asc">Prix croissant</option>
       <option value="desc">Prix décroissant</option>
     </select>
-  </section>
+  </div>
+</section>
   
-  <section class="catalogue">
+<section class="catalogue">
+  <div class="card">
     <h2 >Entrez dans l’univers d’Astérix et Obélix !</h2>
-   <!-- <div *ngFor="let fig of figurines" class="figurines-card">
-        <h3>{{ fig.name }}</h3>
-        <img [src]="fig.imageUrl" [alt]="fig.name">
-        <p>{{ fig.description }}</p>
-        <p><strong>{{ fig.price | currency: 'EUR' : 'simbol' : '1.2-2' }}</strong></p>
-        <p>{{ fig.inStock }}</p>
+   <!-- <div>
+          <div *ngFor="let fig of figurines" class="figurines-card">
+            <h3>{{ fig.name }}</h3>
+            <img [src]="fig.imageUrl" [alt]="fig.name">
+            <p><strong>{{ fig.price |  number: '1.2-2' }} €}}</strong></p>
+            <p [[ngClass]="fig.inStock ? 'en-stock : 'rupture"]>{{ fig.inStock ? 'En stock' : 'Rupture de stock' }}</p>
+          </div>
     </div> -->
-  </section>
+  </div>
+</section>
