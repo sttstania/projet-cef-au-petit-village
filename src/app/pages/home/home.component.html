@@ -30,7 +30,7 @@
 <section class="catalogue">
   <div class="card">
     <h2 >Entrez dans l’univers d’Astérix et Obélix !</h2>
-    <button class="arrow" (click)="prevFigurine()"><</button>
+    <button class="arrow" (click)="prevPage()"><</button>
     <div class="carousel">
           <div 
             *ngFor="let fig of figurines" 
@@ -43,6 +43,6 @@
           </div>
     </div>
 
-    <button class="arrow" (click)="nextFigurine()">></button>
+    <button class="arrow" (click)="nextPage()">></button>
   </div>
 </section>

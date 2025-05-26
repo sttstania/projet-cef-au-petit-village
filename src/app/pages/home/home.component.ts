@@ -12,8 +12,8 @@ import { Router } from '@angular/router';
 export class HomeComponent {
   figurines: FigurineModel[] = [];
   visibleFigurines: FigurineModel[] = [];
-  currentFigurine = 0;
-  itemsPerPage = 3;
+  currentPage = 0;
+  itemsPerPage = 2;
 
   constructor(private figurineService: FigurineService, private router: Router) {}
 
@@ -25,20 +25,20 @@ export class HomeComponent {
   }
 
   updateVisibleFigurines() {
-    const start = this.currentFigurine * this.itemsPerPage;
+    const start = this.currentPage * this.itemsPerPage;
     const end = start + this.itemsPerPage;
     this.visibleFigurines = this.figurines.slice(start, end);
   }
 
-  nextFigurine() {
-    if ((this.currentFigurine + 1) * this.itemsPerPage < this.figurines.length) {
-      this.currentFigurine++;
+  nextPage() {
+    if ((this.currentPage + 1) * this.itemsPerPage < this.figurines.length) {
+      this.currentPage++;
       this.updateVisibleFigurines();
     }
   }
-  prevFigurine() {
-    if (this.currentFigurine > 0 ) {
-      this.currentFigurine--;
+  prevPage() {
+    if (this.currentPage > 0 ) {
+      this.currentPage--;
       this.updateVisibleFigurines();
     }
   }
