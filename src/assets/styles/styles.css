@@ -7,7 +7,7 @@
   font-style: normal;
 }
 
-
+/* variables */
 :root {
   --clr-bg: #F9D0A3;
   --clr-primary: #FDD90B;
@@ -21,7 +21,7 @@
   --radius: 0.5rem;
 }
 
-/* ====== RESET ====== */
+/* ====== RESET & body ====== */
 * {
   margin: 0;
   padding: 0;
@@ -33,6 +33,7 @@ body {
   background-color: var(--clr-bg);
   color: var(--clr-dark);
   line-height: 1.6;
+  padding-top: 2rem;
 }
 
 /* ====== TYPOGRAPHY ====== */
@@ -73,12 +74,12 @@ a:hover {
   color: var(--clr-primary);
 }
 
-/* ====== UTILITAIRES ====== */
+/* ====== boutton ====== */
 .btn {
   background-color: var(--clr-primary);
   color: var(--clr-dark);
   padding: 0.6rem 1.2rem;
-  margin: 1rem;
+  margin: 1rem 0;
   border: none;
   border-radius: var(--radius);
   font-weight: bold;
@@ -91,16 +92,44 @@ a:hover {
   color: white;
 }
 
+/* card */
 
 .card {
-  background-color: white;
-  padding: 1rem;
-  margin: 1rem;
+    background-color: white;
   border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+
+/* card image responsive */
+.card img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+/* ==== CONTENU CARTE ==== */
+.card .figurine-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* ==== ÉTATS DE STOCK ==== */
+.en-stock {
+  color: #228B22;
+  font-weight: bold;
+}
+
+.rupture {
+  color: #DA001E;
+  font-weight: bold;
 }
 
 /* ====== FORM ====== */
@@ -113,7 +142,7 @@ a:hover {
 input, textarea, select {
   padding: 0.5rem;
   border-radius: var(--radius);
-  border: 1px solid #ccc;
+  border: 1px solid #151217;
   font-family: var(--font-body);
 }
 

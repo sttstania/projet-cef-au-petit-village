@@ -42,4 +42,5 @@ footer .container {
 footer p {
   font-size: 0.95rem;
   font-family: var(--font-body);
+  filter: brightness(0) invert(1);
 }

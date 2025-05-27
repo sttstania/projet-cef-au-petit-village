@@ -11,38 +11,41 @@
   
 <section class="recherche-tri">
   <div class="card">
-    <h2>Nos figurines</h2>
+    <h2 class="titre-centre">Nos figurines</h2>
 
 
-    <!-- a refaire -->
-    <div>
-      <input type="text" placeholder="Rechercher une figurine">
-      <button class="btn" >Rechercher</button>
+    <!-- manque lier au catalogue -->
+    <div class="recherche-tri-row">
+      <div class="search-bar">
+        <input type="text" placeholder="Rechercher une figurine">
+        <button class="btn">Rechercher</button>
+      </div>
+
+      <select>
+        <option value="asc">Prix croissant</option>
+        <option value="desc">Prix décroissant</option>
+      </select>
     </div>
-  
-    <select>
-      <option value="asc">Prix croissant</option>
-      <option value="desc">Prix décroissant</option>
-    </select>
   </div>
 </section>
   
 <section class="catalogue">
   <div class="card">
     <h2 >Entrez dans l’univers d’Astérix et Obélix !</h2>
-    <button class="arrow" (click)="prevPage()"><</button>
-    <div class="carousel">
-          <div 
-            *ngFor="let fig of visibleFigurines" 
-            class="figurines-card"
-            (click)="goToProduct(fig.id)">
-            
-            <h3>{{ fig.name }}</h3>
-            <img [src]="fig.imageUrl" [alt]="fig.name">
-            <p class="price"><strong>{{ fig.price |  number: '1.2-2' }} €</strong></p>
-          </div>
+    <div class="carousel-container">
+      <button class="arrow" (click)="prevPage()"><</button>
+      <div class="carousel">
+            <div 
+              *ngFor="let fig of visibleFigurines" 
+              class="figurines-card"
+              (click)="goToProduct(fig.id)">
+              
+              <h3>{{ fig.name }}</h3>
+              <img [src]="fig.imageUrl" [alt]="fig.name">
+              <p class="price"><strong>{{ fig.price |  number: '1.2-2' }} €</strong></p>
+            </div>
+      </div>
+      <button class="arrow" (click)="nextPage()">></button>
     </div>
-
-    <button class="arrow" (click)="nextPage()">></button>
   </div>
 </section>

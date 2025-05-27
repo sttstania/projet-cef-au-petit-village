@@ -13,7 +13,7 @@ export class HomeComponent {
   figurines: FigurineModel[] = [];
   visibleFigurines: FigurineModel[] = [];
   currentPage = 0;
-  itemsPerPage = 2;
+  itemsPerPage = 3;
 
   constructor(private figurineService: FigurineService, private router: Router) {}
 
