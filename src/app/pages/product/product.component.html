@@ -2,7 +2,12 @@
   <h1>Découvrez nos figurines exclusives Astérix & Obélix</h1>
   <div class="figurines-grid">
     <div *ngFor="let fig of figurines" class="card">
-        <img [src]="fig.imageUrl" [alt]="fig.name">
+        <img 
+          [src]="fig.imageUrl" 
+          [alt]="fig.name"
+          (click)="goToProduct(fig.id)"
+          class="clickable-img"
+        >
         <div class="figurine-content">
             <h3>{{ fig.name }}</h3>
             <h4>Description</h4>
