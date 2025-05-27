@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'product', component: ProductComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
+  // { path: 'product/:id', component: ProductDetailComponent }
   { path: '**', redirectTo: '' },   //toutes les routes non definies (404)
 ];
 
