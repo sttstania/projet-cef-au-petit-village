@@ -30,6 +30,7 @@ import { SortByPricePipe } from './sort-by-price.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    FormsModule,
     HttpClientModule,
   ],
   providers: [
