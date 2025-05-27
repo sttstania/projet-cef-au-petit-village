@@ -18,7 +18,7 @@ export class FigurineService {
     );
   }
 
-  // 🔽 Récupère UNE figurine par ID (via le JSON)
+  // Récupère UNE figurine par ID (via le JSON)
   getFigurineById(id: number): Observable<FigurineModel | undefined> {
     return this.getFigurines().pipe(
       map(figurines => figurines.find(fig => fig.id === id))

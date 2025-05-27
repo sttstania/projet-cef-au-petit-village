@@ -12,6 +12,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductComponent } from './pages/product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { SortByPricePipe } from './sort-by-price.pipe';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ContactComponent,
     ProductComponent,
     ProductDetailComponent,
+    SortByPricePipe,
   ],
   imports: [
     BrowserModule,
