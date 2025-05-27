@@ -25,6 +25,6 @@ export class ProductComponent implements OnInit {
   }
 
   goToProduct(id: number): void {
-    this.router.navigate(['/produit', id]);
+    this.router.navigate(['/product', id]);
   }
 }
