@@ -1,0 +1,16 @@
+<section class="product-detail-container" *ngIf="figurine">
+  <div class="product-detail">
+    <div class="image-container">
+      <img [src]="figurine.imageUrl" [alt]="figurine.name" />
+    </div>
+    <div class="info-container">
+      <h1>{{ figurine.name }}</h1>
+      <h3>Description</h3>
+      <p>{{ figurine.description }}</p>
+      <p><strong>{{ figurine.price | number: '1.2-2' }} €</strong></p>
+      <p [ngClass]="figurine.inStock ? 'en-stock' : 'rupture'">
+        {{ figurine.inStock ? 'En stock' : 'Rupture de stock' }}
+      </p>
+    </div>
+  </div>
+</section>
