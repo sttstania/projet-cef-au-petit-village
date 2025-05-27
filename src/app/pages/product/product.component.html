@@ -11,11 +11,12 @@
         <div class="figurine-content">
             <h3>{{ fig.name }}</h3>
             <h4>Description</h4>
-            <p>{{ fig.description }}</p>
+            <p>{{ fig.description | slice:0:50 }}{{ fig.description.length > 50 ? '...' : '' }}</p>
             <p><strong>{{ fig.price | number: '1.2-2' }} €</strong></p>
             <p [ngClass]="fig.inStock ? 'en-stock' : 'rupture'">
                 {{ fig.inStock ? 'En stock' : 'Rupture de stock' }}
-            </p>      
+            </p>
+            <button class="btn" (click)="goToProduct(fig.id)">En savoir plus</button>      
         </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FigurineModel } from '../../models/figurine.model';
 import { FigurineService } from '../../services/figurines.service';
-import { Router, RouterConfigOptions } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
