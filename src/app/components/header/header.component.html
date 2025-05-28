@@ -1,12 +1,16 @@
 <header>
+    <!-- logo cliquable, redirige vers page accueil -->
     <div class="logo">
         <a routerLink="/" aria-label="retour page accueil">
             <img src="/assets/images/Logo-au-petit-village.png" alt="Logo de l'entreprise Au petit village" width="200">
         </a>
     </div>
 
+    <!-- bouton pour ouvrir/fermer menu burger -->
     <button class="menu-toggle" (click)="isMenuOpen = !isMenuOpen">Menu</button>
 
+    <!-- Menu principal -->
+     <!-- classe 'open' est ajoutée dynamiquement si menu est ouvert -->
     <nav [ngClass]="{ open: isMenuOpen }">
         <a routerLink="/">Accueil</a>
         <a routerLink="/about">À propos</a>

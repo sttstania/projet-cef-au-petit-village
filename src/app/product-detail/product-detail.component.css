@@ -1,3 +1,4 @@
+/* Conteneur principal en colonne */
 .product-detail {
   display: flex;
   flex-direction: column;
@@ -7,6 +8,7 @@
   margin: 0 auto;
 }
 
+/* Style de l'image */
 .image-container img {
   width: 100%;
   max-width: 400px;
@@ -14,25 +16,26 @@
   object-fit: cover;
 }
 
+/* Bloc d'infos produit */
 .info-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-/* Responsive layout */
+/* Responsive : passe en ligne à partir de 768px */
 @media (min-width: 768px) {
   .product-detail {
-    flex-direction: row;
+    flex-direction: row;                 /* Image à gauche, texte à droite */
     align-items: flex-start;
   }
 
   .image-container {
-    flex: 1;
+    flex: 1;                             /* 1 part sur 3 */
   }
 
   .info-container {
-    flex: 2;
-    padding-left: 2rem;
+    flex: 2;                             /* 2 parts sur 3 */
+    padding-left: 2rem;                   /* Espace entre image et texte */
   }
 }

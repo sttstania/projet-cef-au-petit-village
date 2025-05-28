@@ -1,37 +1,46 @@
 <section class="presentation">
   <div class="card">
+    
     <h1>Bienvenue "Au Petit Village"</h1>
     
-    <p> Né au cœur d’un <em> village gaulois</em> imaginaire, <strong>Petit Village</strong> est un atelier d’artisans passionnés qui donne vie à l’univers d’<em>Astérix & Obélix</em> à travers des <em>figurines</em> uniques, faites main. Entre tradition, humour et créativité, chaque pièce raconte une histoire, inspirée de la légende et façonnée avec un savoir-faire d’exception. Plus que des objets de collection, nos créations sont une invitation à replonger dans les aventures mythiques de nos <em>héros gaulois</em>.</p>
+    <p> Né au cœur d’un <em> village gaulois</em> imaginaire, le <strong>Petit Village</strong> est un atelier d’artisans passionnés qui donne vie à l’univers d’<em>Astérix & Obélix</em> à travers des <em>figurines</em> uniques faites main. Entre tradition, humour et créativité, chaque pièce raconte une histoire inspirée de la légende et façonnée avec un savoir-faire d’exception. Plus que des objets de collection, nos créations sont une invitation à replonger dans les aventures mythiques de nos <em>héros gaulois</em>.</p>
     <a routerLink="/about">
       <button class="btn ">En savoir plus</button>
     </a>
    </div>
 </section>
   
-<section class="recherche-tri">
+<!-- catalogue en carousel -->
+<section class="catalogue">
   <div class="card">
+    <!-- titre section -->
     <h2 class="titre-centre">Nos figurines</h2>
 
 
-    <!-- manque lier au catalogue -->
+    <!-- zone de recherche et tri -->
     <div class="recherche-tri-row">
       <div class="search-bar">
-        <input type="text" [(ngModel)]="searchText" (input)="onSearch()" placeholder="Rechercher une figurine">
+        <input 
+          type="text" 
+          [(ngModel)]="searchText" 
+          (input)="onSearch()" 
+          placeholder="Rechercher une figurine">
         <button class="btn" (click)="onSearch()">Rechercher</button>
       </div>
 
-      <select [(ngModel)]="sortOrder" (change)="onSortOrderChange()">
+      <select class="tri" [(ngModel)]="sortOrder" (change)="onSortOrderChange()">
         <option value="asc">Prix croissant</option>
         <option value="desc">Prix décroissant</option>
       </select>
     </div>
   </div>
-</section>
+
   
-<section class="catalogue">
+
   <div class="card">
-    <h2 >Entrez dans l’univers d’Astérix et Obélix !</h2>
+    <h3>Entrez dans l’univers d’Astérix et Obélix !</h3>  <!--texte intro catalogue --> 
+
+    <!-- carousel de figurines -->
     <div class="carousel-container">
       <button class="arrow" (click)="prevPage()"><</button>
       <div class="carousel">
@@ -40,7 +49,7 @@
               class="figurines-card"
               (click)="goToProduct(fig.id)">
               
-              <h3>{{ fig.name }}</h3>
+              <h4>{{ fig.name }}</h4>
               <img [src]="fig.imageUrl" [alt]="fig.name">
               <p class="price"><strong>{{ fig.price |  number: '1.2-2' }} €</strong></p>
             </div>

@@ -1,42 +1,52 @@
 /* Présentation d'accueil */
 .presentation {
-  text-align: center;
-  margin-bottom: 2rem;
+  text-align: center;   /* Centre le contenu horizontalement */
+  margin-bottom: 2rem;   /* Espacement en bas de la section */
 }
 
-/* Titre section */
+/* Titres centrés communs */
 .titre-centre {
   text-align: center;
   margin-bottom: 1.5rem;
 }
 
-/* Recherche et tri */
+/* Section catalogue principale */
+.catalogue{
+  background-color: color-mix(in srgb, var(--clr-bg), white 60%);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;  /* Coins arrondis */
+  margin-top: 2rem;         /* Espace au-dessus du catalogue */
+}
+
+/* Barre de recherche et tri */
 .recherche-tri {
   margin-bottom: 2rem;
 }
 
 .recherche-tri-row {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  /* Empile les éléments verticalement en mobile */
   gap: 1rem;
-  align-items: center;
+  align-items: center;    /* Centre les éléments horizontalement */
 }
 
 .search-bar {
   display: flex;
-  flex-direction: row;
+  flex-direction: row;  /* Recherche et bouton côte à côte */
   gap: 0.5rem;
   width: 100%;
-  max-width: 600px;
+  max-width: 600px;  /* Limite la largeur de la barre de recherche */
 }
 
 .search-bar input {
-  flex: 1;
+  flex: 1;               /* Prend tout l'espace restant */
   padding: 0.5rem 1rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   border: 1px solid #ccc;
-  border-radius: 30px;
+  border-radius: 30px;    /* Arrondit les coins du champ */
 }
+
 
 .tri select {
   padding: 0.5rem;
@@ -48,7 +58,7 @@
 /* Responsive disposition alignée */
 @media (min-width: 768px) {
   .recherche-tri-row {
-    flex-direction: row;
+    flex-direction: row;     /* Aligne horizontalement sur les écrans larges */
     justify-content: space-evenly;
   }
 }
@@ -61,48 +71,63 @@
 .carousel-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;  /* fleches + carousel */
   gap: 1rem;
+  overflow: hidden;
 }
 
+/* Zone défilante des figurines */
 .carousel {
+  flex: 1;
   display: flex;
   gap: 1rem;
   flex-wrap: nowrap;
   justify-content: space-around;
-  overflow-x: auto;
+  overflow-x: auto;   /* Scroll horizontal sur petit écran */
   padding: 1rem 0;
 }
 
+/* Boutons fléchés du carousel */
 .arrow {
   background-color: transparent;
+  margin: 1rem;
+  padding: 1rem;
   border: none;
   font-size: 2rem;
   cursor: pointer;
 }
 
+/* Carte de figurine individuelle */
 .figurines-card {
   width: 200px;
-  flex-shrink: 0;
+  flex-shrink: 0;     /* Ne rétrécit pas dans le carrousel */
   cursor: pointer;
   text-align: center;
   border: 1px solid #ccc;
   padding: 1rem;
   border-radius: 12px;
-  background-color: #fff;
-  transition: transform 0.2s ease;
+  background-color: color-mix(in srgb, var(--clr-bg), white 30%);
+  transition: transform 0.2s ease;     /* Animation de zoom au survol */
 }
 
 .figurines-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.05);     /* Zoom léger au survol */
 }
+
 
 .figurines-card img {
   max-width: 100%;
   height: auto;
 }
 
+/* prix figurines */
 .price {
   font-weight: bold;
   color: var(--clr-accent);
+}
+
+/* Titre <h3> centré dans une .card */
+.card h3 {
+  text-align: center;
+  margin: 1rem;
 }

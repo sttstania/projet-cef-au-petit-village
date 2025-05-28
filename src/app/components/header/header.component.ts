@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
- isMenuOpen = false
+  // gere l'etat d'ouverture du menu
+  isMenuOpen = false
 }

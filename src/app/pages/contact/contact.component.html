@@ -1,6 +1,8 @@
 <section id="contact">
   <div class="card">
     <h1>Contactez-nous</h1>
+
+    <!-- Formulaire avec validation -->
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
 
       <!-- Nom -->
@@ -59,6 +61,7 @@
         </div>
       </div>
 
+      <!-- Bouton d'envoi désactivé si le formulaire est invalide ou message vide -->
       <button type="submit" [disabled]="!contactForm.valid || hasOnlySpaces(message.value)">
         Envoyer
       </button>
