@@ -1,3 +1,4 @@
+/* style general */
 footer {
   background-color: var(--clr-dark);
   color: white;
@@ -9,11 +10,13 @@ footer {
   font-family: var(--font-body);
 }
 
+/* Conteneur centré et limité en largeur */
 footer .container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Liste horizontale des icônes de réseaux sociaux */
 .social-links {
   display: flex;
   justify-content: center;
@@ -24,23 +27,27 @@ footer .container {
   margin-bottom: 1rem;
 }
 
+/* Style de chaque lien de réseau social */
 .social-links li a {
   display: inline-block;
   transition: transform 0.2s ease;
 }
 
+/* Agrandissement des icônes au survol */
 .social-links li a:hover {
   transform: scale(1.2);
 }
 
+/* Style des images des réseaux sociaux */
 .social-links img {
   width: 32px;
   height: 32px;
-  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);       /* Rend les icônes blanches */
 }
 
+/* Texte de copyright */
 footer p {
   font-size: 0.95rem;
   font-family: var(--font-body);
-  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);            /* Assure contraste */
 }

@@ -1,16 +1,32 @@
+  <!-- bouton de retour -->
+  <button class="btn" (click)="goBack()">Retour</button>
+
+<!-- Message d'erreur si aucune figurine trouvée -->
+ <p class="error-message" *ngIf="figurineNotFound">
+  La figurine n'a pas été trouvée!
+ </p>
+
+<!-- Section affichée seulement si une figurine est chargée -->
 <section class="product-detail-container" *ngIf="figurine">
   <div class="product-detail">
+    
+    <!-- Colonne image -->
     <div class="image-container">
       <img [src]="figurine.imageUrl" [alt]="figurine.name" />
     </div>
+    
+    <!-- Colonne infos produit -->
     <div class="info-container">
       <h1>{{ figurine.name }}</h1>
       <h3>Description</h3>
       <p>{{ figurine.description }}</p>
       <p><strong>{{ figurine.price | number: '1.2-2' }} €</strong></p>
+      
+      <!-- Stock : classe dynamique en fonction de la dispo -->
       <p [ngClass]="figurine.inStock ? 'en-stock' : 'rupture'">
         {{ figurine.inStock ? 'En stock' : 'Rupture de stock' }}
       </p>
     </div>
   </div>
+
 </section>

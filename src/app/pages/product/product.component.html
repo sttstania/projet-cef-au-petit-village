@@ -1,23 +1,37 @@
 <section class="catalogue">
   <h1>Découvrez nos figurines exclusives Astérix & Obélix</h1>
+  
+  <!-- grille contenant toutes les figurines -->
   <div class="figurines-grid">
+    <!-- boucle pour afficher chaque figurine -->
     <div *ngFor="let fig of figurines" class="card">
-        <img 
-          [src]="fig.imageUrl" 
-          [alt]="fig.name"
-          (click)="goToProduct(fig.id)"
-          class="clickable-img"
-        >
-        <div class="figurine-content">
-            <h3>{{ fig.name }}</h3>
-            <h4>Description</h4>
-            <p>{{ fig.description | slice:0:50 }}{{ fig.description.length > 50 ? '...' : '' }}</p>
-            <p><strong>{{ fig.price | number: '1.2-2' }} €</strong></p>
-            <p [ngClass]="fig.inStock ? 'en-stock' : 'rupture'">
-                {{ fig.inStock ? 'En stock' : 'Rupture de stock' }}
-            </p>
-            <button class="btn" (click)="goToProduct(fig.id)">En savoir plus</button>      
-        </div>
+      <!-- image cliquable, redirige vers page detail produit -->
+      <img 
+        [src]="fig.imageUrl" 
+        [alt]="fig.name"
+        (click)="goToProduct(fig.id)"
+        class="clickable-img"
+      >
+      <!-- Contenu textuel de la carte figurine -->
+      <div class="figurine-content">
+         <!-- Nom de la figurine -->
+        <h3>{{ fig.name }}</h3>  
+        
+        <!-- Section description courte 50caracteres -->
+        <h4>Description</h4>
+        <p>{{ fig.description | slice:0:50 }}{{ fig.description.length > 50 ? '...' : '' }}</p>
+        
+        <!-- Prix -->
+        <p><strong>{{ fig.price | number: '1.2-2' }} €</strong></p>
+
+        <!-- Disponibilité-->
+        <p [ngClass]="fig.inStock ? 'en-stock' : 'rupture'">
+          {{ fig.inStock ? 'En stock' : 'Rupture de stock' }}
+        </p>
+
+        <!-- Bouton pour accéder à la page detail produit -->
+        <button class="btn" (click)="goToProduct(fig.id)">En savoir plus</button>      
+      </div>
     </div>
   </div>
 </section>

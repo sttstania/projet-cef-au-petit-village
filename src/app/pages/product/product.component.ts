@@ -11,19 +11,21 @@ import { Router } from '@angular/router';
   styleUrl: './product.component.css'
 })
 export class ProductComponent implements OnInit {
-  figurines: FigurineModel[] = [];
+  figurines: FigurineModel[] = [];          //liste de figurines
 
   constructor(
-    private figurineService: FigurineService,
-    private router: Router
+    private figurineService: FigurineService,    //injection du service
+    private router: Router                       //navigation
   ) {}
 
   ngOnInit(): void {
     this.figurineService.getFigurines().subscribe(data => {
+      // appel du service au chargement du composant pour recuperer les figurines
       this.figurines = data;
     });
   }
 
+  // redirige vers la page du produit cliqué
   goToProduct(id: number): void {
     this.router.navigate(['/product', id]);
   }

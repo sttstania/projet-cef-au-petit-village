@@ -1,7 +1,7 @@
-import { Figurine } from './figurine.model';
+import { FigurineModel } from './figurine.model';
 
-describe('Figurine', () => {
+describe('FigurineModel', () => {
   it('should create an instance', () => {
-    expect(new Figurine()).toBeTruthy();
+    expect(new FigurineModel()).toBeTruthy();
   });
 });
